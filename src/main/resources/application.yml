@@ -1,0 +1,19 @@
+## datasource master #
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://sh-cdb-i8inwrdv.sql.tencentcdb.com:63265/master?characterEncoding=UTF-8
+    username: root
+    password: fangcun2018
+  second-datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://sh-cdb-i8inwrdv.sql.tencentcdb.com:63265/slave?characterEncoding=UTF-8
+    username: root
+    password: fangcun2018
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.example.apodb
